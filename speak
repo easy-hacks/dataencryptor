@@ -1,0 +1,11 @@
+from gtts import gTTS
+from pygame import mixer
+import time
+import os
+def speaker(elehe):
+    language = 'en'
+    myobj = gTTS(text=elehe, lang=language, slow=False)
+    myobj.save("welcome.mp3")   
+    mixer.init()
+    mixer.music.load('welcome.mp3')
+    mixer.music.play()
